@@ -1,0 +1,95 @@
+/* src/pages/LandingPage.css */
+
+.landing {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('/plants/background.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Title animation */
+.landing h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  animation: slideDown 1.2s ease;
+}
+
+/* Paragraph fade-in */
+.landing p {
+  font-size: 1.3rem;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+/* Button styling + animation */
+.landing button {
+  padding: 12px 28px;
+  background: #2d6a4f;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: scale(1);
+  animation: bounceIn 1.5s ease;
+}
+
+.landing button:hover {
+  background: #1b4332;
+  transform: scale(1.1);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .landing h1 {
+    font-size: 2.2rem;
+  }
+
+  .landing p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .landing button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
